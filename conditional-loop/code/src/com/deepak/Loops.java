@@ -17,7 +17,11 @@ public class Loops {
         }
 
 //        While Loops
-
+        int num = 1;
+        while (num <= n){
+            System.out.println(num);
+            num++;
+        }
 
     }
 }
