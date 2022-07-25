@@ -32,6 +32,7 @@ public class ArmStrongNo {
             return true;
         }else {
             return false;
+//            120
         }
 
     }
