@@ -2,10 +2,20 @@ package com.deepak;
 
 public class InfiniteArray {
     public static void main(String[] args) {
+            int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
+            int target = 10;
+            System.out.println(rangeArray(arr, target));
 
     }
     static int rangeArray(int[] arr, int target){
-
+        int start = 0;
+        int end = 1;
+        while ( target > arr[end]){
+            int newStart = end + 1;
+            end = end + (end - start + 1) * 2;
+            start = newStart ;
+        }
+        return binarySearch(arr, start, end, target);
     }
     static int binarySearch( int[] arr, int start, int end, int target){
         while (start <= end){
